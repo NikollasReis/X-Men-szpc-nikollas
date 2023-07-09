@@ -1,0 +1,77 @@
+body{/*aqui no comecinhos podemos mexer no body inteiro e colocar uma fonte predominante mo site todo, mudar a cor de fundo, e a cor das cores*/
+    font-family: "Oxanium", cursive;
+    background-color: #000000;/*essas cores aqui são tiradas de codigos q pode se achado na intenet e tbm da pra mudar se apertar naquele quadrado pequeno*/
+    color: #ffffff;
+} /*aqui no CSS onde usamos as classes la do html*/
+body::before{/*esse comando "body::before" ele é usado para fazer o que vem antes do body q seria a pagina, resumindo é a imagem de fundo*/
+    content: "";
+    background-image: url(../imagens/bg-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+}/*a maioria dessas medidas eu tiraria de outro app q um designer fez todo o layout para poder usar de parametro aqui*/
+.cabecalho{
+    display: flex;
+    justify-content: center;
+}/*se usa "." para usar uma class q foi determinada no html*/
+.selecao-de-personagens{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    min-width: calc(100vh - 152px);
+    justify-content: center;
+}
+.selecao-de-personagens .lista-de-personagens{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.selecao-de-personagens .personagens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 585px;
+    gap: 25px;
+}
+.selecao-de-personagens .titulo{
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #47f4ff;
+    width: 100%;
+    text-align: center;
+}
+.lista-de-personagens .personagem img{
+    width: 100%;
+    height:100%;
+}
+.lista-de-personagens .personagem.selecionado{
+    box-shadow: 0px 0px 24px 5px #0271f7;
+
+}
+.personagem-selecionado{
+    text-align: center;
+    max-height: 530px;
+}
+.personagem-selecionado .personagem-grande{
+    width:430px;
+    height: 430px;
+}
+.personagem-selecionado .nome-personagem{
+    border-bottom: 2px solid #47f4ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.personagem-selecionado .descricao-personagem{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+    width: 420px;
+}
